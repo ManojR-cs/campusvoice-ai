@@ -9,8 +9,10 @@ const register = async (req, res, next) => {
       ...data,
     });
   } catch (error) {
-    res.status(400);
-    next(error);
+    res.status(400).json({
+      success: false,
+      message: error.message || 'Registration failed',
+    });
   }
 };
 
@@ -18,8 +20,10 @@ const login = async (req, res, next) => {
   try {
     const { email, password } = req.body;
     if (!email || !password) {
-      res.status(400);
-      throw new Error('Please provide email and password');
+      return res.status(400).json({
+        success: false,
+        message: 'Please provide both email and password',
+      });
     }
     const data = await authService.loginUser(email, password);
     res.status(200).json({
@@ -28,8 +32,10 @@ const login = async (req, res, next) => {
       ...data,
     });
   } catch (error) {
-    res.status(400);
-    next(error);
+    res.status(400).json({
+      success: false,
+      message: error.message || 'Login failed',
+    });
   }
 };
 

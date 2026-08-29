@@ -18,8 +18,10 @@ const createComplaint = async (req, res, next) => {
       complaint,
     });
   } catch (error) {
-    res.status(400);
-    next(error);
+    res.status(400).json({
+      success: false,
+      message: error.message || 'Failed to create complaint',
+    });
   }
 };
 
@@ -44,8 +46,10 @@ const getComplaintById = async (req, res, next) => {
       ...data,
     });
   } catch (error) {
-    res.status(404);
-    next(error);
+    res.status(404).json({
+      success: false,
+      message: error.message || 'Complaint not found',
+    });
   }
 };
 
@@ -67,8 +71,10 @@ const updateStatus = async (req, res, next) => {
       complaint,
     });
   } catch (error) {
-    res.status(400);
-    next(error);
+    res.status(400).json({
+      success: false,
+      message: error.message || 'Failed to update status',
+    });
   }
 };
 
@@ -85,8 +91,10 @@ const assignComplaint = async (req, res, next) => {
       complaint,
     });
   } catch (error) {
-    res.status(400);
-    next(error);
+    res.status(400).json({
+      success: false,
+      message: error.message || 'Failed to assign complaint',
+    });
   }
 };
 
@@ -95,8 +103,7 @@ const addComment = async (req, res, next) => {
     const { comment } = req.body;
     const complaint = await Complaint.findById(req.params.id);
     if (!complaint) {
-      res.status(404);
-      throw new Error('Complaint not found');
+      return res.status(404).json({ success: false, message: 'Complaint not found' });
     }
 
     const log = await ComplaintTimelineLog.create({
@@ -129,8 +136,10 @@ const submitFeedback = async (req, res, next) => {
       feedback,
     });
   } catch (error) {
-    res.status(400);
-    next(error);
+    res.status(400).json({
+      success: false,
+      message: error.message || 'Failed to submit feedback',
+    });
   }
 };
 
@@ -138,8 +147,7 @@ const deleteComplaint = async (req, res, next) => {
   try {
     const complaint = await Complaint.findByIdAndDelete(req.params.id);
     if (!complaint) {
-      res.status(404);
-      throw new Error('Complaint not found');
+      return res.status(404).json({ success: false, message: 'Complaint not found' });
     }
     res.status(200).json({
       success: true,
