@@ -41,31 +41,36 @@ Educational institutions often struggle with managing student grievances regardi
 
 # 5. Screenshots
 
-### 1. Student Dashboard & Active Complaints Overview
+### 1. Student Overview Dashboard
+![Student Dashboard](screenshots/student-dashboard.png)
 > Displays complaint progress overview, active status metrics, and quick submission CTA.
 
-### 2. Complaint Submission Form with AI Auto-Suggest
+### 2. Complaint Submission Form with AI Auto-Suggest Category
+![Log Complaint Form](screenshots/log-complaint-form.png)
 > Interactive form featuring AI category auto-suggestion, campus location selector, and photo proof uploader.
 
-### 3. Admin Command Center & AI Duplicate Warning Banner
-> Centralized ticket queue table, status filters, department assignment modal, and duplicate detection alerts.
-
-### 4. Interactive Complaint Detail Page & Timeline Feed
+### 3. Interactive Complaint Detail Page & Visual Progress Pipeline
+![Complaint Detail & Timeline](screenshots/complaint-detail.png)
 > Visual step-by-step resolution step tracker, official resolution proof banner, live clarification feed, and student 5-star rating.
 
+### 4. Admin Operations Command Center
+![Admin Command Center](screenshots/admin-dashboard.png)
+> Centralized ticket queue table, status filters, department assignment modal, and duplicate detection alerts.
+
 ### 5. Department Analytics & Performance Intelligence
+![Department Analytics](screenshots/department-analytics.png)
 > Department resolution rate benchmarks, average turnaround speed (hours), and category breakdown metrics.
 
 ---
 
 # 6. Live Demo
-- **Deployed Application (Vercel)**: `https://campusvoice-ai.vercel.app` *(Replace with your live Vercel URL)*
+- **Deployed Application (Vercel)**: [https://client-six-alpha-65.vercel.app](https://client-six-alpha-65.vercel.app)
 
 ---
 
 # 7. Backend
-- **Deployed Backend API (Render)**: `https://campusvoice-backend.onrender.com` *(Replace with your live Render API URL)*
-- **API Health Check**: `https://campusvoice-backend.onrender.com/api/health`
+- **Deployed Backend API (Render)**: [https://campusvoice-backend.onrender.com](https://campusvoice-backend.onrender.com)
+- **API Health Check**: [https://campusvoice-backend.onrender.com/api/health](https://campusvoice-backend.onrender.com/api/health)
 
 ---
 
@@ -75,7 +80,7 @@ Follow these steps to run the application locally on your computer.
 
 ### Step 1: Clone or Open the Repository
 ```bash
-git clone https://github.com/your-username/campusvoice-ai.git
+git clone https://github.com/ManojR-cs/campusvoice-ai.git
 cd campusvoice-ai
 ```
 
