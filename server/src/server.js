@@ -6,6 +6,7 @@ const connectDB = require('./config/db');
 const { PORT, CLIENT_URL } = require('./config/env');
 const { initSocket } = require('./utils/socket');
 const { initEscalationEngine } = require('./services/escalationService');
+const { autoSeedIfEmpty } = require('./utils/seed');
 const { errorHandler, notFound } = require('./middleware/errorMiddleware');
 
 // Routes
@@ -19,8 +20,10 @@ const notificationRoutes = require('./routes/notificationRoutes');
 const app = express();
 const server = http.createServer(app);
 
-// Connect Database
-connectDB();
+// Connect Database & Auto-Seed Demo Users if missing
+connectDB().then(() => {
+  autoSeedIfEmpty();
+});
 
 // Init Socket.IO
 initSocket(server, CLIENT_URL);
