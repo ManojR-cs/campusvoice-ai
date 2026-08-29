@@ -69,8 +69,8 @@ Educational institutions often struggle with managing student grievances regardi
 ---
 
 # 7. Backend
-- **Deployed Backend API (Render)**: [https://campusvoice-backend.onrender.com](https://campusvoice-backend.onrender.com)
-- **API Health Check**: [https://campusvoice-backend.onrender.com/api/health](https://campusvoice-backend.onrender.com/api/health)
+- **Deployed Backend API (Render)**: [https://campusvoice-backend-glyk.onrender.com](https://campusvoice-backend-glyk.onrender.com)
+- **API Health Check**: [https://campusvoice-backend-glyk.onrender.com/api/health](https://campusvoice-backend-glyk.onrender.com/api/health)
 
 ---
 
