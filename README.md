@@ -146,4 +146,3 @@ The application relies on the following environment variables. Set these in your
 | `EMAIL_USER` | SMTP username | `your_smtp_user` |
 | `EMAIL_PASS` | SMTP password | `your_smtp_password` |
 
-> ⚠️ **IMPORTANT**: Never commit actual API keys, database passwords, or `.env` files to GitHub. A `.gitignore` file is provided in the repository root to automatically ignore sensitive environment files.
