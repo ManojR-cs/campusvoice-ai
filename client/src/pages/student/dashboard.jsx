@@ -24,7 +24,7 @@ export default function StudentDashboard() {
     <ProtectedRoute allowedRoles={['student']}>
       <div className="flex">
         <Sidebar />
-        <div className="flex-1 p-6 md:p-8">
+        <div className="flex-1 min-w-0 p-4 md:p-8 space-y-6 overflow-x-auto">
           {/* Welcome Banner */}
           <div className="glass-panel p-6 rounded-3xl border border-slate-800 mb-8 bg-gradient-to-r from-slate-900 via-slate-900 to-blue-950/40 relative overflow-hidden">
             <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4">

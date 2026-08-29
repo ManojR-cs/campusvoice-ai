@@ -38,7 +38,7 @@ export default function Analytics() {
     <ProtectedRoute allowedRoles={['admin']}>
       <div className="flex">
         <Sidebar />
-        <div className="flex-1 p-6 md:p-8 space-y-6">
+        <div className="flex-1 min-w-0 p-4 md:p-8 space-y-6 overflow-x-auto">
           <div>
             <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-2">
               <BarChart3 className="w-3.5 h-3.5 mr-1" /> Performance Intelligence

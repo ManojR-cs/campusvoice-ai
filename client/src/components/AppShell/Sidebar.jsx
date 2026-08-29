@@ -40,7 +40,7 @@ const Sidebar = () => {
   const links = user.role === 'admin' ? adminLinks : user.role === 'staff' ? staffLinks : studentLinks;
 
   return (
-    <aside className="w-64 glass-panel border-r border-slate-800 min-h-[calc(100vh-4rem)] p-4 hidden md:block">
+    <aside className="w-64 shrink-0 glass-panel border-r border-slate-800 min-h-[calc(100vh-4rem)] p-4 hidden md:block">
       <div className="space-y-1">
         <p className="px-3 text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-2">
           {user.role} Navigation
